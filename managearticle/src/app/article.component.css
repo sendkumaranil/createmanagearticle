@@ -1,0 +1,45 @@
+h1 {
+    font-size: 2.0em;
+    margin: 20px 0 0 0;
+    font-weight: 400;   
+}
+h3 { 
+    color: blue;
+}
+table {
+    border-collapse: collapse;
+    background-color: #596302;
+}
+table,td {
+    border: 1px solid black;
+    font-size:17px;
+    color: white;
+}
+table,th{
+    border: 1px solid black;
+    font-size:17px;
+    color:greenyellow;
+}
+input {
+    width: 225px;
+    margin: 8px 0;
+    background-color: darkkhaki;
+    font-size:17px;
+    color: white;
+}
+button {
+    background-color: #008CBA;
+    color: white;
+}
+.button-red{
+    background-color: red;
+    color: white;
+}
+.error{
+    color: red;
+    font-size: 20px;
+}
+.success{
+    color: green;
+    font-size: 20px;
+} 
