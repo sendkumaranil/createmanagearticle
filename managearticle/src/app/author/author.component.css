@@ -1,0 +1,36 @@
+h2 {
+    color: brown;
+}
+ul {
+    color: darkblue;
+}
+.listitem {
+    color: darkred;
+}
+.stringexample{
+    color: forestgreen;
+    font-size: 20px;
+    font-weight: bold;
+}
+.arrayexample1{
+    color: fuchsia;
+}
+.arrayexample2{
+    font-size: 25px;
+    font-weight: bold;
+}
+.arrayexample3{
+    color: purple;
+}
+.first{
+    color: red;
+    font-size: 20px;
+}
+.second{
+    color: orange;
+    font-size: 25px;
+}
+.third{
+    color: blue;
+    font-size: 30px;
+}

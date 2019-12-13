@@ -52,4 +52,12 @@
   </tr>
 </table>
  </div>
+ <div>
+   <h3>Books Details:</h3>
+   <ul>
+     <li *ngFor="let book of mybooks; let i=index">
+        {{i+1}} Title={{book.name}} Author={{book.author}}
+     </li>
+   </ul>
+ </div>
 </div>

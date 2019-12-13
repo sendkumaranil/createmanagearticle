@@ -16,6 +16,8 @@ export class ArticleComponent implements OnInit {
    requestProcessing = false;
    articleIdToUpdate = null;
    processValidation = false;
+   mybooks:any[];
+   
    //Create form
    articleForm = new FormGroup({
        title: new FormControl('', Validators.required),
@@ -23,10 +25,29 @@ export class ArticleComponent implements OnInit {
    });
    //Create constructor to get service instance
    constructor(private articleService: ArticleService) {
+     
    }
    //Create ngOnInit() and and load articles
    ngOnInit(): void {
-	   this.getAllArticles();
+      this.getAllArticles();
+      this.mybooks=[
+         {
+            name:"Java",
+            author:"John Miley"
+         },
+         {
+            name:"C++",
+            author:"Kanetkar"
+         },
+         {
+            name:"Hibernate",
+            author:"Smith Miley"
+         },
+         {
+            name:"Database",
+            author:"John Miley"
+         }
+      ];
    }   
    //Fetch all articles
    getAllArticles() {

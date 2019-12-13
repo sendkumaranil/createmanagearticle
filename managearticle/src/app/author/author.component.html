@@ -1,0 +1,42 @@
+<h2>
+  ngStyle and group ngFor example:
+</h2>
+<ul *ngFor="let group of countries">
+  <li>{{group.countryname}}</li>
+<ul *ngFor="let state of group.states">
+  <li [ngStyle]="{'color':getStateColorByCountry(group.countryname)}">
+    {{state.name}}
+  </li>
+</ul>
+</ul>
+<div [ngClass]="'stringexample'">
+  ngClass Example with String
+</div>
+<div [ngClass]="['arrayexample1','arrayexample2']">
+    ngClass Example with array
+</div>
+<div [ngClass]="{'arrayexample1':false,'arrayexample2':true,'arrayexample3':true}">
+    ngClass Example with Object
+</div>
+<div [ngClass]="getColor('FIRST')">
+  ngClass example with method/component-first
+</div>
+<div [ngClass]="getColor('SECOND')">
+    ngClass example with method/component-second
+</div>
+<div [ngClass]="getColor('THIRD')">
+      ngClass example with method/component-third
+</div>
+<h3>Custom Pipe Example :</h3>
+<table border="1" width="35%">
+<tr>
+  <th>Name</th>
+  <th>Gender</th>
+  <th>Age</th>
+</tr>
+<tr *ngFor="let author of authors">
+  <td>{{author.name|salutation:author.gender|uppercase}}</td>
+  <td>{{author.gender|uppercase}}</td>
+  <td>{{author.age}}</td>
+</tr>
+</table>

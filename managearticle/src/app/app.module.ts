@@ -6,6 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article.component';
 import { ArticleService } from './article.service';
+import { AuthormoduleModule } from './authormodule/authormodule.module';
+import { AuthorComponent } from './author/author.component';
+import { SalutationPipe } from './salutation.pipe';
 
 @NgModule({
   declarations: [
@@ -15,11 +18,13 @@ import { ArticleService } from './article.service';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AuthormoduleModule
   ],
   providers: [
     ArticleService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[AuthormoduleModule]
 })
 export class AppModule { }
