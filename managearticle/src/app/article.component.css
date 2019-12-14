@@ -43,3 +43,25 @@ button {
     color: green;
     font-size: 20px;
 } 
+
+.form-example{
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid grey;
+    padding: 50px;
+    margin: 20px;
+  }
+
+.router-example{
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+.outerline-details{
+    outline-style: dotted;
+    outline-color:red;
+    width:400px;
+    margin: 20px;
+}

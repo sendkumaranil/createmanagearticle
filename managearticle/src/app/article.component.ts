@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { ArticleService } from './article.service';
 import { Article } from './article';
+import { Router } from '@angular/router';
 
 @Component({
    selector: 'app-article',
@@ -24,7 +25,8 @@ export class ArticleComponent implements OnInit {
        category: new FormControl('', Validators.required)	   
    });
    //Create constructor to get service instance
-   constructor(private articleService: ArticleService) {
+   constructor(private articleService: ArticleService,
+      private router:Router) {
      
    }
    //Create ngOnInit() and and load articles
@@ -117,6 +119,13 @@ export class ArticleComponent implements OnInit {
       this.articleIdToUpdate = null;
       this.articleForm.reset();	  
 	  this.processValidation = false;
+   }
+   studentRoute(stdtype:string){
+      if(stdtype==='student'){
+         this.router.navigate(['/student']);
+      }else if(stdtype==='stddetails'){
+         this.router.navigate(['/studentdetails']);
+      }
    }
 }
     

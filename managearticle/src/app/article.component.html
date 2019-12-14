@@ -1,4 +1,4 @@
-<div>
+<div [ngClass]="'form-example'">
   <h2>Manage Articles:</h2>
   <h3 *ngIf="articleIdToUpdate; else create">
     Update Article for Id: {{articleIdToUpdate}}
@@ -52,12 +52,22 @@
   </tr>
 </table>
  </div>
- <div>
-   <h3>Books Details:</h3>
-   <ul>
-     <li *ngFor="let book of mybooks; let i=index">
-        {{i+1}} Title={{book.name}} Author={{book.author}}
-     </li>
-   </ul>
- </div>
+</div>
+<div [ngClass]="'outerline-details'">
+  <h3>Books Details:</h3>
+  <ul>
+    <li *ngFor="let book of mybooks; let i=index">
+       {{i+1}} Title={{book.name}} Author={{book.author}}
+    </li>
+  </ul>
+</div>
+<div [ngClass]="'router-example'">
+  <h3>Router Link Example</h3><hr/>
+  <a [routerLink]="['/student']">Student</a> | 
+  <a [routerLink]="['/studentdetails']">StudentDetails</a><hr/>
+  <button (click)="studentRoute('student')">Student</button>
+  <button (click)="studentRoute('stddetails')">StudentDetails</button><hr/>
+</div>
+<div>
+  <router-outlet></router-outlet>
 </div>

@@ -8,18 +8,23 @@ import { ArticleComponent } from './article.component';
 import { ArticleService } from './article.service';
 import { AuthormoduleModule } from './authormodule/authormodule.module';
 import { AuthorComponent } from './author/author.component';
-import { SalutationPipe } from './salutation.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { StudentComponent } from './student/student.component';
+import { StudentdetailsComponent } from './studentdetails/studentdetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent
+    ArticleComponent,
+    StudentComponent,
+    StudentdetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AuthormoduleModule
+    AuthormoduleModule,
+    AppRoutingModule
   ],
   providers: [
     ArticleService
